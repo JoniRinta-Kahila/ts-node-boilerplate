@@ -10,7 +10,7 @@
   },
   "homepage": "https://github.com/JoniRinta-Kahila/ts-node-boilerplate#readme",
   "keywords": ["nodejs", "express", "boilerplate", "node", "typescript", "mocha", "chai", "tests", "airbnb-eslint", "eslint"],
-  "author": "Joni Rinta-Kahila",
+  "author": "Joni Rinta-Kahila <joni.rinta-kahila@hotmail.com> (https://rints.in)",
   "license": "MIT",
   "dependencies": {
     "express": "^4.17.1"
