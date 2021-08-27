@@ -22,5 +22,22 @@ module.exports = {
       },
     ],
     'no-console': 0,
+    // fix the error "Missing file extension "ts" for ..."
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        ts: 'never',
+      },
+    ],
+  },
+  // fix the error "Missing file extension "ts" for ..."
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.ts'],
+        paths: ['./src'],
+      },
+    },
   },
 };
