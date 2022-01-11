@@ -1,4 +1,4 @@
-# ts-node-boilerplate
+# ts-node-boilerplate [![CodeQL](https://github.com/JoniRinta-Kahila/ts-node-boilerplate/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/JoniRinta-Kahila/ts-node-boilerplate/actions/workflows/codeql-analysis.yml)
 
 nodeJs boilerplate with TypeScript, airbnb-eslint, express, mocha and chai
 
