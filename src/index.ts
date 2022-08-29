@@ -1,14 +1,18 @@
 import express from 'express';
+import cors from 'cors';
 
 const app = express();
+app.use(cors({ origin: '*' }));
 
-export const test1 = (): boolean => {
-  const val = true;
-  return val;
-};
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
-export const test2 = () => false;
+app.get('/hello', (req, res) => {
+  res.send('Hello World!');
+});
 
-app.listen(5000, () => {
+app.listen(5001, () => {
   console.log('Server running on port 5000');
 });
+
+export default app;

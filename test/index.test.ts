@@ -1,15 +1,21 @@
-import { expect } from 'chai';
+import chai from 'chai';
+import chaiHttp from 'chai-http';
 import 'mocha';
-import * as index from '../src/index';
+import server from '../src/index';
+
+chai.use(chaiHttp);
+chai.should();
 
 describe('Initial tests', () => {
-  it('checking the tests are working 1', () => {
-    const val = index.test1();
-    expect(val).to.equal(true);
-  });
-
-  it('checking the tests are working 2', () => {
-    const val = index.test2();
-    expect(val).to.equal(false);
+  it('it should GET Hello World!', (done) => {
+    chai
+      .request(server)
+      .get('/hello')
+      .end((err, res) => {
+        res.should.have.status(200);
+        res.text.should.be.a('string');
+        res.text.should.be.equal('Hello World!');
+        done();
+      });
   });
 });
